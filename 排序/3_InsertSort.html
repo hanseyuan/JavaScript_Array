@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>插入排序</title>
+ </head>
+ <body>
+		<script>
+			var arr = [2,88,6,8,3,0,34,72];
+			function insertSort(arr){
+				//i从1开始向右遍历每个元素
+				for(var i=1;i<arr.length;i++){
+					//将i位置的值临时保存到变量t中
+					var t=arr[i];
+					//定义p=i-1;
+					var p=i-1;
+					//反复(p>=0&&p位置的值>=t)
+					while(p>=0&&arr[p]>=t){
+						//将p位置的值赋值给p+1位置
+						arr[p+1]=arr[p];
+						//p--
+						p--;
+					}
+					//(循环结束)
+					//将t保存在p+1位置
+					arr[p+1]=t;
+				}
+			}
+			insertSort(arr);
+			console.log(arr);
+		</script>
+ </body>
+</html>

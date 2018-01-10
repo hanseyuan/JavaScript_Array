@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>选择排序</title>
+ </head>
+ <body>
+	<script>
+		var arr = [2,88,6,8,3,0,34,72];
+		function selectSort(arr){
+			for(var i=0;i<arr.length;i++){
+				var min=arr[i]; //假定比较范围内的第一个值为最小值
+				var index=i; //记录最小值的下标
+				for(var j=i+1;j<arr.length;j++){
+					//找到比较范围内第一个值为最小值的记录下来
+					if(arr[j]<min){
+						min=arr[j];
+						index=j;
+					}
+					//吧范围内最小的值交换到范围内的第一个
+					if(index!=i){
+						var temp=arr[i];
+						arr[i]=arr[index];
+						arr[index]=temp;
+					}
+				}
+			}
+		}
+		selectSort(arr);
+		console.log(arr);
+	</script>
+ </body>
+</html>

@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>希尔排序</title>
+ </head>
+ <body>
+	<script>
+		var arr=[3,44,38,5,47,15,36,26,27,2,46,4,19,50,48];
+		function shellSort(arr){
+			var len=arr.length;
+			for(var fraction = Math.floor(len / 2);fraction > 0; fraction = Math.floor(fraction / 2)){
+				 for (var i = fraction; i < len; i++) {
+						for (var j = i - fraction; j >= 0 && arr[j] > arr[fraction + j]; j -= fraction) {
+							var temp = arr[j];
+							arr[j] = arr[fraction + j];
+							arr[fraction + j] = temp;
+						}
+				 }
+			}
+		}
+		 shellSort(arr);
+		 console.log(arr);
+	</script>
+ </body>
+</html>

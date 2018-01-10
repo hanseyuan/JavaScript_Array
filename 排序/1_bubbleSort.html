@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>bubbleSort</title>
+ </head>
+ <body>
+	<script>
+		var examplearr=[8,94,15,88,55,76,21,39];
+		function sortarr(arr){
+			for(i=0;i<arr.length-1;i++){
+				//console.log(examplearr[i]);
+				for(j=0;j<arr.length-1-i;j++){
+					//console.log(examplearr[i]+"比较"+examplearr[j]);
+					//console.log(examplearr[j]+"比较"+examplearr[j+1]);
+					if(arr[j]>arr[j+1]){
+						var temp=arr[j];
+						arr[j]=arr[j+1];
+						arr[j+1]=temp;
+						//console.log(examplearr[j+1]);
+					}
+				}
+				console.log(examplearr[i]);
+				console.log(examplearr);
+			}
+			return arr;
+		}
+		sortarr(examplearr);
+		//console.log(examplearr);
+	</script>
+ </body>
+</html>
