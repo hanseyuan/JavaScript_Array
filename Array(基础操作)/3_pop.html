@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>pop</title>
+ </head>
+ <body>
+	<h2>pop:删除原数组最后一项，并返回删除元素的值；如果数组为空则返回undefined </h2>
+	<script>
+		var a=[1,2,3,4,5];
+		console.log(a.pop());   //5 
+		console.log(a);			//[2,3,4,5]
+		console.log(a.pop());   //4 
+		console.log(a);			//[3,4,5]
+		console.log(a.pop());   //3
+		console.log(a);			//[4,5]
+		console.log(a.pop());   //2 
+		console.log(a);			//[5]
+		console.log(a.pop());   //1 
+		console.log(a);			//[]
+		console.log(a.pop());   //undefined  
+	</script>
+ </body>
+</html>

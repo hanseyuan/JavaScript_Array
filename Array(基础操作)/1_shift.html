@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>shift</title>
+ </head>
+ <body>
+	<h2>shift:删除原数组第一项，并返回删除元素的值；如果数组为空则返回undefined </h2>
+   <script>
+	var a=[1,2,3,4,5];
+	console.log(a.shift());  //1
+	console.log(a);			 //[2,3,4,5]
+	console.log(a.shift());  //2
+	console.log(a);			 //[3,4,5]
+	console.log(a.shift());  //3
+	console.log(a);			 //[4,5]
+	console.log(a.shift());  //4
+	console.log(a);			 //[5]
+	console.log(a.shift());  //5
+	console.log(a);			 //[]
+	console.log(a.shift());  //undefined
+   </script>
+ </body>
+</html>

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>splice</title>
+ </head>
+ <body>
+	<h2>splice(start,deleteCount,val1,val2,...):从start位置开始删除deleteCount项，并从该位置起插入val1,val2,... </h2>
+	<script>
+		var a=[1,2,3,4,5];
+		/*
+		var b=a.splice(2,2); //从start位置开始删除deleteCount项，
+		console.log(b);  // [3, 4]
+		console.log(a);  // [1, 2, 5]
+		*/
+
+		/*
+		var b=a.splice(2,2,7,8,9); //从2位置开始删除2项，并从该位置起插入7,8,9 
+		console.log(b);  // [3, 4]
+		console.log(a);  // [1, 2, 7, 8, 9, 5]
+		*/
+
+		var b = a.splice(0,1); //同shift   
+		a.splice(0,0,-2,-1); var b = a.length; //同unshift   
+		var b = a.splice(a.length-1,1); //同pop   
+		a.splice(a.length,0,6,7); var b = a.length; //同push  
+	</script>
+ </body>
+</html>
